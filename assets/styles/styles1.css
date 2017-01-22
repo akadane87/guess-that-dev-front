@@ -1,0 +1,16 @@
+.title {
+  color: black;
+  font-size: 28px;
+}
+
+.auth_box{
+  width: 170px;
+  float: right;
+  background-color: red;
+  border: 2px solid cyan;
+  overflow: auto;
+}
+
+.crud-form{
+  margin-bottom: 35px;
+}

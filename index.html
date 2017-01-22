@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Favorite Color</title>
+
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="/assets/styles/styles1.css">
+      <link rel="stylesheet" type="text/css" href="/assets/styles/reset.css">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+    <body>
+      <h1 class="title">Guess That Dev</h1>
+
+
+<div class="content_wrapper">
+
+  <div class="auth_box">
+    <div class="crud-form">
+      <form id="sign-up" class="crud-form">
+        <fieldset>
+          <p class="form_title">Sign up!</p>
+          <input type="text" name="credentials[email]" placeholder="E-Mail">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="crud-form">
+      <form id="sign-in" class="crud-form">
+        <fieldset>
+          <p class="form_title">Sign in!</p>
+          <input class="SignIn_email" type="text" name="credentials[email]" placeholder="E-Mail">
+          <input class="SignIn_password" type="password" name="credentials[password]" placeholder="Password">
+          <input class="SignIn-button" type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="hidden-till-signin">
+      <div class="crud-form">
+        <form id="change-password" >
+          <fieldset>
+            <p class="form_title">Change Password</p>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" name="submit" value="Change password!">
+          </fieldset>
+        </form>
+      </div>
+    <div class="crud-form">
+      <form id="sign-out" >
+        <fieldset>
+          <p class="form_title">Sign Out</p>
+          <input type="submit" name="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
     </body>
 </html>

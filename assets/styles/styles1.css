@@ -14,3 +14,99 @@
 .crud-form{
   margin-bottom: 35px;
 }
+
+
+             /* ----------------------------------------------------- */
+/*//////////////////////     FLASH CARD -- HANDLEBARS  start   //////////////////*/
+            /* ----------------------------------------------------- */
+
+
+#flash-card-wrapper{
+  border: 1px solid purple;
+}
+
+.flash-card-handlebars{
+  border: 1px solid green;
+}
+
+.dev-picture{
+  border: 1px solid cyan;
+  display: block;
+  width: 240px;
+  height: 240px;
+}
+
+.name-response {
+  width: 200px;
+  height: 35px;
+  display: block;
+}
+
+/*//////    BUTTONS  -- start  ////////*/
+
+.button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 14px 45px;
+    display: inline-block;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*.button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}*/
+
+.button-2d {
+    border-radius: 5px;
+}
+
+.button-2 {
+    background: #cb4e4e;
+    color: #fff;
+    -webkit-box-shadow: 0 4px #ab3c3c;
+    -moz-box-shadow: 0 4px #ab3c3c;
+    box-shadow: 0 4px #ab3c3c;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.button-2d:hover {
+    box-shadow: 0 6px #ab3c3c;
+    top: -2px;
+}
+
+/*.button-2d:visited {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}*/
+
+.button-2d:active, .button-2d:visited {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+
+.name-check-submit {
+  background-color: blue;
+  color: white;
+}
+
+
+/*//////    BUTTONS  -- end  ////////*/

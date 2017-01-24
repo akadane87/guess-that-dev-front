@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
 
 const authEvents = require('./auth/events.js');
+const gameEvents = require('./game/g_events.js');
 
 
 $(() => {
@@ -13,10 +14,11 @@ $(() => {
   // $('.hidden-till-signin').hide();
   // $('.crud_box').hide();
 
-  // $('.SignIn_email').val('a@a.com');
-  // $('.SignIn_password').val('a');
+  $('.SignIn_email').val('666@666.com');
+  $('.SignIn_password').val('1');
   // $('.SignIn-button').click();
   authEvents.addHandlers();
+  gameEvents.addHandlers();
 });
 
 // use require with a reference to bundle the file and use it in this file

@@ -1,20 +1,20 @@
-<li>
+
 {{#each pictures as |picture|}}
-  <img class="dev-picture" src={{picture.url}} alt="dev picture" />
+<li class="dev-flash-card">
+  <img data-id={{picture.id}} data-name={{picture.name}} class="dev-picture" src={{picture.url}} alt="dev picture" />
 
 
   <form class="name-check-form">
     <div class="form-group">
       <input class="name-response" placeholder="Click Button to Enter Name">
     </div>
-    <div class="form-group">
-      <button class="button button-2 button-2d" type=submit data-id={{name.id}}>{{name.name}}</button>
+    <div class="form-group name-list-handlebars">
+      {{!-- name-list2 goes HERE --}}
     </div>
     <div class="form-group">
-      <button class="button name-check-submit" type=submit>Submit</button>
+      <button data-id={{picture.id}} class="button name-check-submit" type=submit>Submit</button>
     </div>
+    <p class="ufm-check"></p>
   </form>
+  </li>
 {{/each}}
-
-
-</li>

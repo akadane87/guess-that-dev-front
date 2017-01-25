@@ -7,6 +7,7 @@ const authEvents = require('./auth/events.js');
 const gameEvents = require('./game/g_events.js');
 
 
+
 $(() => {
   setAPIOrigin(location, config);
 
@@ -19,6 +20,7 @@ $(() => {
   // $('.SignIn-button').click();
   authEvents.addHandlers();
   gameEvents.addHandlers();
+
 });
 
 // use require with a reference to bundle the file and use it in this file

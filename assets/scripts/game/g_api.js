@@ -13,16 +13,16 @@ const getAllPictures = () =>
         },
     });
 
-const getAllNames = () =>
-    $.ajax({
-        url: config.apiOrigins.development + '/names',
-        method: 'GET',
-        headers: {
-          Authorization: 'Token token=' + store.user.token,
-        },
-    });
+// const getAllNames = () =>
+//     $.ajax({
+//         url: config.apiOrigins.development + '/names',
+//         method: 'GET',
+//         headers: {
+//           Authorization: 'Token token=' + store.user.token,
+//         },
+//     });
 
 module.exports = {
   getAllPictures,
-  getAllNames,
+  // getAllNames,
 };

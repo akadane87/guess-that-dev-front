@@ -32,8 +32,13 @@
 .dev-picture{
   border: 1px solid cyan;
   display: block;
+  margin: 0 auto;
   width: 240px;
   height: 240px;
+}
+
+.dev-flash-card{
+  border: 1px orange solid;
 }
 
 .name-response {
@@ -41,6 +46,19 @@
   height: 35px;
   display: block;
 }
+
+.name-check-form{
+  text-align: center;
+}
+
+.form-group > input{
+  margin: 0 auto;
+}
+
+/*.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}*/
 
 /*//////    BUTTONS  -- start  ////////*/
 

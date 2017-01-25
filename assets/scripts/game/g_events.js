@@ -15,19 +15,19 @@ const onGetAllPictutes = (event) => {
     .catch(g_ui.failure);
 };
 
-const onGetAllNames = (event) => {
-  // debugger;
-  console.log('Get All Pics EVENTS');
-  event.preventDefault();
-  g_api.getAllNames()
-    .then(g_ui.getAllNamesSuccess)
-    .catch(g_ui.failure);
-};
+// const onGetAllNames = (event) => {
+//   // debugger;
+//   console.log('Get All Pics EVENTS');
+//   event.preventDefault();
+//   g_api.getAllNames()
+//     .then(g_ui.getAllNamesSuccess)
+//     .catch(g_ui.failure);
+// };
 
 
 const addHandlers = () => {
   $('#create-game').on('click', onGetAllPictutes);
-  $('#create-game').on('click', onGetAllNames);
+  // $('#create-game').on('click', onGetAllNames);
 };
 
 module.exports = {addHandlers};

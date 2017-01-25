@@ -15,6 +15,19 @@ const onGetAllPictutes = (event) => {
     .catch(g_ui.failure);
 };
 
+const onPostResponse = (data) => {
+  g_api.postResponse(data)
+  .then(g_ui.postResponseSuccess)
+  .catch(g_ui.failure);
+};
+
+const onDeleteHistory = () => {
+  debugger;
+  g_api.deleteHistory()
+  .then(g_ui.deleteHistorySuccess)
+  .catch(g_ui.failure);
+};
+
 // const onGetAllNames = (event) => {
 //   // debugger;
 //   console.log('Get All Pics EVENTS');
@@ -27,7 +40,11 @@ const onGetAllPictutes = (event) => {
 
 const addHandlers = () => {
   $('#create-game').on('click', onGetAllPictutes);
-  // $('#create-game').on('click', onGetAllNames);
+  $('#delete-attempts').on('click', onDeleteHistory);
 };
 
-module.exports = {addHandlers};
+module.exports = {
+  addHandlers,
+
+
+};

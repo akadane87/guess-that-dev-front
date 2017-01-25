@@ -11,13 +11,17 @@ const getAllPicturesSuccess = (data) => {
   $('.name-list-handlebars').append(namesTemplate(data));
   // $('.name-input').on('click', gameLogic.addLogicEvents());
   gameLogic.addHandlers();
+  $('#delete-attempts').show();
 };
 
-// const getAllNamesSuccess = (data) => {
-//   console.log('get dem NAMES succeess' + data.names);
-//   $('.name-list-handlebars').append(namesTemplate(data));
+const postResponseSuccess = (data) => {
+  console.log('post response success' + data);
+};
 
-// };
+const deleteHistorySuccess = (id) => {
+  console.log("delete nipples success", + id);
+};
+
 
 
 
@@ -27,6 +31,6 @@ const failure = (error) => {
 
 module.exports = {
   getAllPicturesSuccess,
-  // getAllNamesSuccess,
+  postResponseSuccess,
   failure,
 };

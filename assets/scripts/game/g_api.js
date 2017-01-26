@@ -23,11 +23,20 @@ const postResponse = (data) =>
         },
     });
 
-const deleteHistory = (id, data) =>
+const deleteAttempt = (data) =>
     $.ajax({
-        url: config.apiOrigins.development + '/responses/' + id,
+        url: config.apiOrigins.development + '/attempts',
         method: 'DELETE',
         data,
+        headers: {
+          Authorization: 'Token token=' + store.user.token,
+        },
+    });
+
+const newAttempt = () =>
+    $.ajax({
+        url: config.apiOrigins.development + '/attempts',
+        method: 'POST',
         headers: {
           Authorization: 'Token token=' + store.user.token,
         },
@@ -36,5 +45,6 @@ const deleteHistory = (id, data) =>
 module.exports = {
   getAllPictures,
   postResponse,
-  deleteHistory,
+  deleteAttempt,
+  newAttempt,
 };

@@ -39,6 +39,7 @@ let data = {
     response: responseTF,
     picture_id: pictureId,
     user_id: store.user.id,
+    // attempt_id:
     // otherstuff: // other stuff
   }
 };

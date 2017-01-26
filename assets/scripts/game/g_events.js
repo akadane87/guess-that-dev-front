@@ -4,7 +4,7 @@
 
 const g_api = require('./g_api');
 const g_ui = require('./g_ui');
-const store = require('../store');
+// const store = require('../store');
 
 
 const onGetAllPictutes = (event) => {
@@ -22,11 +22,18 @@ const onPostResponse = (data) => {
   .catch(g_ui.failure);
 };
 
-const onDeleteHistory = () => {
-  let id = store.response.id;
+const onDeleteAttempt = () => {
+  // let id = store.user.id;
   debugger;
-  g_api.deleteHistory(id)
-  .then(g_ui.deleteHistorySuccess)
+  g_api.deleteAttempt()
+  .then(g_ui.deleteAttemptSuccess)
+  .catch(g_ui.failure);
+};
+
+const onNewAttempt = (event) => {
+  event.preventDefault();
+  g_api.newAttempt()
+  .then(g_ui.newAttemptSuccess)
   .catch(g_ui.failure);
 };
 
@@ -42,11 +49,11 @@ const onDeleteHistory = () => {
 
 const addHandlers = () => {
   $('#create-game').on('click', onGetAllPictutes);
-  $('#delete-attempts').on('click', onDeleteHistory);
+  $('#delete-attempts').on('click', onDeleteAttempt);
+  $("#new-attempt").on('click', onNewAttempt);
 };
 
 module.exports = {
   addHandlers,
-
-
+  onPostResponse,
 };

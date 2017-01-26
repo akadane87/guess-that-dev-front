@@ -12,17 +12,21 @@ const getAllPicturesSuccess = (data) => {
   // $('.name-input').on('click', gameLogic.addLogicEvents());
   gameLogic.addHandlers();
   $('#delete-attempts').show();
+  // let dataPost = store.data;
+
 };
 
 const postResponseSuccess = (data) => {
   console.log('post response success' + data);
 };
 
-const deleteHistorySuccess = (id) => {
-  console.log("delete nipples success", + id);
+const deleteAttemptSuccess = (id) => {
+  console.log("delete attempts success", + id);
 };
 
-
+const newAttemptSuccess = (id) => {
+  console.log("delete nipples success", + id);
+};
 
 
 
@@ -32,5 +36,7 @@ const failure = (error) => {
 module.exports = {
   getAllPicturesSuccess,
   postResponseSuccess,
+  newAttemptSuccess,
+  deleteAttemptSuccess,
   failure,
 };

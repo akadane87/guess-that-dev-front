@@ -39,10 +39,10 @@ let data = {
     response: responseTF,
     picture_id: pictureId,
     user_id: store.user.id,
-    // otherstuff: // other studd
+    // otherstuff: // other stuff
   }
-
 };
+  // let storeData = store.data;
   g_api.postResponse(data);
  };
 
@@ -55,4 +55,5 @@ const addHandlers = () => {
 module.exports = {
   addHandlers,
   addLogicEvents,
+  // storeData,
 };

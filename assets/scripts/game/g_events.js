@@ -4,6 +4,7 @@
 
 const g_api = require('./g_api');
 const g_ui = require('./g_ui');
+const store = require('../store');
 
 
 const onGetAllPictutes = (event) => {
@@ -22,8 +23,9 @@ const onPostResponse = (data) => {
 };
 
 const onDeleteHistory = () => {
+  let id = store.response.id;
   debugger;
-  g_api.deleteHistory()
+  g_api.deleteHistory(id)
   .then(g_ui.deleteHistorySuccess)
   .catch(g_ui.failure);
 };

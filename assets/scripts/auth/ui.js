@@ -3,7 +3,6 @@
 const store = require('../store');
 
 const success = (data) => {
-  // $('#messages').text('success');
   console.log('auth success', + data);
 };
 

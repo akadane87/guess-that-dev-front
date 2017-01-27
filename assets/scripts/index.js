@@ -30,3 +30,12 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 require('./example');
+
+
+// # class RemoveAttemptsFromUsers < ActiveRecord::Migration
+//   # def change
+//     # remove_column :users, :Attempts, :integer
+//     # remove_column :users, :attempt, :integer
+//     # remove_column :users, :attempts, :integer
+//   # end
+// # end

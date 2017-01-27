@@ -11,8 +11,8 @@ const signInSuccess = (data) => {
   store.user = data.user;
   console.log('store is' + store);
   // debugger;
-  // $('.hidden-till-signin').show();
-  // $('.crud_box').show();
+  $('.hidden-after-signin').hide();
+  $('.hidden-till-signin').show();
   success(data);
   $('#sign-in').trigger('reset');
   $('.flash-card-handlebars').show();
@@ -20,8 +20,8 @@ const signInSuccess = (data) => {
 
 const signOutSuccess = () => {
     success(store.user);
-    // $('.hidden-till-signin').hide();
-    // $('.crud_box').hide();
+    $('.hidden-till-signin').hide();
+    $('.hidden-after-signin').show();
     store.user = null;
     $('#delete-attempts').hide();
     $('.flash-card-handlebars').hide();

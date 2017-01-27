@@ -13,6 +13,29 @@ const getAllPictures = () =>
         },
     });
 
+
+  const getGame = function(game_id){
+    return $.ajax({
+      url:config.apiOrigins.development + '/attempts/' + game_id,
+      method:'GET',
+      headers:{
+        Authorization:'Token token=' + store.user.token
+      }
+    })
+  };
+
+  const getGames = function(){
+    return $.ajax({
+      url:config.apiOrigins.development + '/attempts/',
+      method:'GET',
+      headers:{
+        Authorization:'Token token=' + store.user.token
+      }
+    })
+  }
+window.getGames = getGames
+  window.getGame = getGame
+
 const postResponse = (data) =>
     $.ajax({
         url: config.apiOrigins.development + '/responses',

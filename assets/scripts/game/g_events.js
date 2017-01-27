@@ -4,11 +4,9 @@
 
 const g_api = require('./g_api');
 const g_ui = require('./g_ui');
-// const store = require('../store');
 
 
 const onGetAllPictutes = (event) => {
-  // debugger;
   console.log('Get All Pics EVENTS');
   event.preventDefault();
   g_api.getAllPictures()
@@ -23,8 +21,6 @@ const onPostResponse = (data) => {
 };
 
 const onDeleteAttempt = () => {
-  // let id = store.user.id;
-  debugger;
   g_api.deleteAttempt()
   .then(g_ui.deleteAttemptSuccess)
   .catch(g_ui.failure);
@@ -37,18 +33,11 @@ const onNewAttempt = (event) => {
   .catch(g_ui.failure);
 };
 
-// const onGetAllNames = (event) => {
-//   // debugger;
-//   console.log('Get All Pics EVENTS');
-//   event.preventDefault();
-//   g_api.getAllNames()
-//     .then(g_ui.getAllNamesSuccess)
-//     .catch(g_ui.failure);
-// };
-
 
 const addHandlers = () => {
-  $('#create-game').on('click', onGetAllPictutes);
+  $('#create-game').on('click', function(e){
+    e.preventDefault();onGetAllPictutes(e); onNewAttempt(e);
+  });
   $('#delete-attempts').on('click', onDeleteAttempt);
   $("#new-attempt").on('click', onNewAttempt);
 };

@@ -9,9 +9,10 @@ const getAllPicturesSuccess = (data) => {
   console.log('get dem PICS succeess' + data);
   $('.flash-card-handlebars').html(picsTemplate(data));
   $('.name-list-handlebars').append(namesTemplate(data));
-  // $('.name-input').on('click', gameLogic.addLogicEvents());
+  $('.name-response').addClass('not-clickable');
   gameLogic.addHandlers();
   $('#delete-attempts').show();
+  $('#new-attempt').show();
   // let dataPost = store.data;
 
 };
@@ -24,8 +25,8 @@ const deleteAttemptSuccess = (id) => {
   console.log("delete attempts success", + id);
 };
 
-const newAttemptSuccess = (id) => {
-  console.log("delete nipples success", + id);
+const newAttemptSuccess = (data) => {
+  console.log("new Attempt success" + data);
 };
 
 

@@ -6,7 +6,7 @@ const store = require('../store');
 
 const getAllPictures = () =>
     $.ajax({
-        url: config.apiOrigins.development + '/pictures',
+        url: config.apiOrigin + '/pictures',
         method: 'GET',
         headers: {
           Authorization: 'Token token=' + store.user.token,
@@ -16,29 +16,29 @@ const getAllPictures = () =>
 
   const getGame = function(game_id){
     return $.ajax({
-      url:config.apiOrigins.development + '/attempts/' + game_id,
+      url:config.apiOrigin + '/attempts/' + game_id,
       method:'GET',
       headers:{
         Authorization:'Token token=' + store.user.token
       }
-    })
+    });
   };
 
   const getGames = function(){
     return $.ajax({
-      url:config.apiOrigins.development + '/attempts/',
+      url:config.apiOrigin + '/attempts/',
       method:'GET',
       headers:{
         Authorization:'Token token=' + store.user.token
       }
-    })
-  }
-window.getGames = getGames
-  window.getGame = getGame
+    });
+  };
+window.getGames = getGames;
+  window.getGame = getGame;
 
 const postResponse = (data) =>
     $.ajax({
-        url: config.apiOrigins.development + '/responses',
+        url: config.apiOrigin + '/responses',
         method: 'POST',
         data,
         headers: {
@@ -48,7 +48,7 @@ const postResponse = (data) =>
 
 const deleteAttempt = (data) =>
     $.ajax({
-        url: config.apiOrigins.development + '/attempts',
+        url: config.apiOrigin + '/attempts',
         method: 'DELETE',
         data,
         headers: {
@@ -58,7 +58,7 @@ const deleteAttempt = (data) =>
 
 const newAttempt = () =>
     $.ajax({
-        url: config.apiOrigins.development + '/attempts',
+        url: config.apiOrigin + '/attempts',
         method: 'POST',
         headers: {
           Authorization: 'Token token=' + store.user.token,

@@ -16,6 +16,7 @@ const signInSuccess = (data) => {
   success(data);
   $('#sign-in').trigger('reset');
   $('.flash-card-handlebars').show();
+  $('#create-game').show();
 };
 
 const signOutSuccess = () => {

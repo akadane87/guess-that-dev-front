@@ -15,5 +15,10 @@ Deployed Front: https://akadane87.github.io/guess-that-dev-front/
 Deployed Back: https://aqueous-falls-94606.herokuapp.com/
 
 
-Wire Frames:
+Wire Frames/User Stories:
 <img src="http://i.imgur.com/WzZ27yYg.jpg" alt="wireframes">
+A user should be able to go through authentication and own data.
+
+
+Installation Dependancies:
+Should you choose to fork or download this repository - Simply run npm install after you have intialized it.

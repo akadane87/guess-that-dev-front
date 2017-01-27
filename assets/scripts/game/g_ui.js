@@ -14,7 +14,7 @@ const getAllPicturesSuccess = (data) => {
   $('#delete-attempts').show();
   $('#new-attempt').show();
   // let dataPost = store.data;
-
+  $('#create-game').hide();
 };
 
 const postResponseSuccess = (data) => {

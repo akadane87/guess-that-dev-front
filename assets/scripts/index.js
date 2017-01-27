@@ -16,8 +16,8 @@ $(() => {
   // $('.crud_box').hide();
   $('#new-attempt').hide();
 
-  // $('.SignIn_email').val('666@666.com');
-  // $('.SignIn_password').val('1');
+  $('.SignIn_email').val('666@666.com');
+  $('.SignIn_password').val('1');
 
   // $('.SignIn-button').click();
   authEvents.addHandlers();

@@ -17,24 +17,36 @@ const getAllPicturesSuccess = (data) => {
   // $('#new-attempt').show();
   // let dataPost = store.data;
   // $('#create-game').hide();
+    console.log('get dem GAMES succeess' + data);
 };
+
+
+
+// const clearForm = () => {
+//      $('.name-response').val(" ", function(){
+//     setTimeout(3000);
+//   });
+// };
 
 const postResponseSuccess = (data) => {
   console.log('post response success' + data);
+  // clearForm();
+  $('.name-response').val(' ');
 };
 
 const deleteAttemptSuccess = (id) => {
+  $('.ufm-game').html("Game History Cleared");
   console.log("delete attempts success", + id);
 };
 
 const newAttemptSuccess = (data) => {
   console.log("new Attempt success" + data);
   $('.ufm-game').html(attemptGames(data));
+
 };
 
-
-
 const failure = (error) => {
+  $('.ufm-game').html("Oops try again");
 };
 
 module.exports = {

@@ -70,4 +70,5 @@ module.exports = {
   postResponse,
   deleteAttempt,
   newAttempt,
+  getGames,
 };

@@ -10,7 +10,7 @@ const onSignUp = function (event) {
   console.log('SignUp Events dude', data);
   event.preventDefault();
   api.signUp(data)
-    .then(ui.success)
+    .then(ui.signUpSuccess)
     .catch(ui.failure);
 };
 
@@ -26,7 +26,7 @@ const onChangePassword = function (event) {
   let data = getFormFields(this);
   event.preventDefault();
   api.changePassword(data)
-    .then(ui.success)
+    .then(ui.changePasswordSuccess)
     .catch(ui.failure);
 };
 

@@ -7,6 +7,13 @@ For my captstone I wanted to solve an actual problem with an app. Something that
 <img src="http://i.imgur.com/0RGOyzB.png" alt="headres">
 <img src="http://i.imgur.com/wX5TywY.png" alt="headers">
 
+Technologies:
+HTML
+CSS
+BOOTSTRAP
+JAVASCRIPT
+RAILS
+ACTIVERECORD
 
 Links to Repos:
 Repo Front: https://github.com/akadane87/guess-that-dev-front
@@ -15,10 +22,11 @@ Deployed Front: https://akadane87.github.io/guess-that-dev-front/
 Deployed Back: https://aqueous-falls-94606.herokuapp.com/
 
 
-Wire Frames/User Stories:
+Front End Wire Frames/User Stories:
 <img src="http://i.imgur.com/WzZ27yYg.jpg" alt="wireframes">
-A user should be able to go through authentication and own data.
-
+A user should be able to go through authentication.
+A user should be able to play and end a game.
+A user should be
 
 Installation Dependancies:
 Should you choose to fork or download this repository - Simply run npm install after you have intialized it.

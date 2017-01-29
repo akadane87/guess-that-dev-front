@@ -11,6 +11,14 @@
   overflow: auto;
 }
 
+.ufm-auth{
+  border: white solid 1px;
+  color: black;
+  font-weight: bold;
+  font-variant: small-caps;
+  margin-bottom: 5px;
+}
+
 .crud-form{
   margin-bottom: 35px;
 }

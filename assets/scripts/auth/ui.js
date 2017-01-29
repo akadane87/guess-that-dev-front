@@ -1,6 +1,8 @@
 'use strict';
 
 const store = require('../store');
+const picsTemplate = require('../templates/flash-card.handlebars');
+const namesTemplate = require('../templates/name-list2.handlebars');
 
 const success = (data) => {
   console.log('auth success', + data);
@@ -21,7 +23,7 @@ const signInSuccess = (data) => {
   success(data);
   $('#sign-in').trigger('reset');
   $('.ufm-auth').html("nice! you're cleared to play");
-  $('.flash-card-handlebars').show();
+  // $('.flash-card-handlebars').show();
   $('#create-game').show();
 };
 
@@ -32,7 +34,8 @@ const signOutSuccess = () => {
     $('.ufm-auth').html(" ");
     store.user = null;
     $('#delete-attempts').hide();
-    $('.flash-card-handlebars').hide();
+    $('.flash-card-handlebars').empty();
+    $('.ufm-game').empty();
     $('#create-game').hide();
 };
 

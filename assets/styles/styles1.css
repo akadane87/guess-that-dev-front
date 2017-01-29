@@ -33,6 +33,7 @@
 
 #flash-card-wrapper{
   border: 1px solid purple;
+  text-align: center;
 }
 
 .flash-card-handlebars{

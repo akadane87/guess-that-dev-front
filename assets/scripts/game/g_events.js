@@ -39,7 +39,7 @@ const addHandlers = () => {
     e.preventDefault();onGetAllPictutes(e); onNewAttempt(e);
   });
   $('#delete-attempts').on('click', onDeleteAttempt);
-  $("#new-attempt").on('click', onNewAttempt);
+  // $("#new-attempt").on('click', onNewAttempt);
 };
 
 module.exports = {

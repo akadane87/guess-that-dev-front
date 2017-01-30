@@ -30,3 +30,7 @@ A user should be
 
 Installation Dependancies:
 Should you choose to fork or download this repository - Simply run npm install after you have intialized it.
+
+Hurdles and Unsolved Problems:
+Sloppy data modeling made my life harder starting out. I originally had a one to one table of names to responeses which made my life much much difficult until I cleaned everything up. Summoning data from 2 different tables into one element made things more complicated than they needed to be.
+Unsolved problems: image slide and style. As of 1/30 this thing looks just terrible! Needs a make over once requirements are met. Also adding the implementation of an image slider will have this behavin much more like flash cards and making the whole look a lot cleaner.

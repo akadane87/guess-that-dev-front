@@ -17,13 +17,11 @@ const signUpSuccess = (data) => {
 const signInSuccess = (data) => {
   store.user = data.user;
   console.log('store is' + store);
-  // debugger;
   $('.hidden-after-signin').hide();
   $('.hidden-till-signin').show();
   success(data);
   $('#sign-in').trigger('reset');
   $('.ufm-auth').html("nice! you're cleared to play");
-  // $('.flash-card-handlebars').show();
   $('#create-game').show();
 };
 
@@ -32,11 +30,13 @@ const signOutSuccess = () => {
     $('.hidden-till-signin').hide();
     $('.hidden-after-signin').show();
     $('.ufm-auth').html(" ");
+    $('.game-stat').html(" ");
     store.user = null;
     $('#delete-attempts').hide();
     $('.flash-card-handlebars').empty();
     $('.ufm-game').empty();
     $('#create-game').hide();
+
 };
 
 const changePasswordSuccess = (data) => {

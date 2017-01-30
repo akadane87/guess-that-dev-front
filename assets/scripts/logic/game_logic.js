@@ -8,7 +8,6 @@ const store = require('../store');
 // };
 
 
-
 const addLogicEvents = (event) => {
   event.preventDefault();
   let name = $(event.target).data('name'); //
@@ -24,23 +23,33 @@ const nameCheck = (event) => {
   let submitId = $(event.target).attr('data-id');
   let pictureId = $('.dev-picture').eq(submitId-1).attr('data-id');
   let responseTF = undefined;
-  let responseTotal = [];
-  let responseT = [];
+
+
+
   // debugger;
   //
+
+  if (store.responseTotal === 0) {
+    $('.game-stat').html('You got 0 correct out of 0');
+  }else{
+    $('.game-stat').html('You got ' + store.responseT + ' correct out of ' + store.responseTotal);
+}
+
   if ( $('.name-response').attr('data-id') === pictureId) {
     responseTF = true;
-    responseTotal++;
-    responseT++;
+    store.responseTotal++;
+    store.responseT++;
     // debugger;
     $(event.target).parent().parent().find('.ufm-check').html('NICE');
     // $('.ufm-check').html('NICE');
   } else {
-    responseTF = false;
-    responseTotal++;
+    store.responseTF = false;
+    store.responseTotal++;
     $(event.target).parent().parent().find('.ufm-check').html('NOPE');
   }
-$('.game-stat').html('You got' + responseT + 'correct out of' + responseTotal);
+  
+  $('.game-stat').html('You got ' + store.responseT + ' correct out of ' + store.responseTotal);
+
 
 let data = {
   response: {

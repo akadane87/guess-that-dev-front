@@ -4,6 +4,7 @@
 
 const g_api = require('./g_api');
 const g_ui = require('./g_ui');
+const store = require('../store');
 
 
 const onGetAllPictutes = (event) => {
@@ -39,7 +40,12 @@ const onNewAttempt = (event) => {
 
 const addHandlers = () => {
   $('#create-game').on('click', function(e){
-    e.preventDefault();onGetAllPictutes(e); onNewAttempt(e);
+    e.preventDefault();
+    onGetAllPictutes(e);
+    onNewAttempt(e);
+    store.responseTotal = [];
+    store.responseT = [];
+    $('.game-stat').html(' ');
   });
   $('#delete-attempts').on('click', onDeleteAttempt);
   // $("#new-attempt").on('click', onNewAttempt);

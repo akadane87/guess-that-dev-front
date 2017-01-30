@@ -32,11 +32,13 @@ const nameCheck = (event) => {
     responseTF = true;
     responseTotal++;
     responseT++;
-    $('.ufm-check').html('NICE');
+    // debugger;
+    $(event.target).parent().parent().find('.ufm-check').html('NICE');
+    // $('.ufm-check').html('NICE');
   } else {
     responseTF = false;
     responseTotal++;
-    $('.ufm-check').html('NOPE');
+    $(event.target).parent().parent().find('.ufm-check').html('NOPE');
   }
 $('.game-stat').html('You got' + responseT + 'correct out of' + responseTotal);
 

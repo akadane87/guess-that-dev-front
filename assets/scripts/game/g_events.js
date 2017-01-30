@@ -13,9 +13,8 @@ const onGetAllPictutes = (event) => {
     .then(g_ui.getAllPicturesSuccess)
     .catch(g_ui.failure);
   g_api.getGames()
-  .then(g_ui.getGamePicturesSuccess)
+  .then(g_ui.getGamesSuccess)
   .catch(g_ui.failure);
-  // debugger;
 };
 
 const onPostResponse = (data) => {

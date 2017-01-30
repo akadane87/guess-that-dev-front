@@ -24,15 +24,21 @@ const nameCheck = (event) => {
   let submitId = $(event.target).attr('data-id');
   let pictureId = $('.dev-picture').eq(submitId-1).attr('data-id');
   let responseTF = undefined;
+  let responseTotal = [];
+  let responseT = [];
   // debugger;
   //
   if ( $('.name-response').attr('data-id') === pictureId) {
     responseTF = true;
+    responseTotal++;
+    responseT++;
     $('.ufm-check').html('NICE');
   } else {
     responseTF = false;
+    responseTotal++;
     $('.ufm-check').html('NOPE');
   }
+$('.game-stat').html('You got' + responseT + 'correct out of' + responseTotal);
 
 let data = {
   response: {
@@ -45,12 +51,16 @@ let data = {
 };
   // let storeData = store.data;
   g_api.postResponse(data);
+
  };
 
 const addHandlers = () => {
   // $('.flash-card-handlebars').on('submit', '.name-check-form', addLogicEvents);
   $('.name-input').on('click', addLogicEvents);
-  $('.name-check-submit').on('click', nameCheck);
+  $('.name-check-submit').on('click', function(e){
+    $('.name-response').val(''); nameCheck(e);
+  });
+
 };
 
 module.exports = {

@@ -24,10 +24,11 @@ const getAllPictures = () =>
     });
   };
 
-  const getGames = function(){
+  const getGames = function(data){
     return $.ajax({
       url:config.apiOrigin + '/attempts/',
       method:'GET',
+      data,
       headers:{
         Authorization:'Token token=' + store.user.token
       }
